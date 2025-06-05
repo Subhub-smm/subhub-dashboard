@@ -5,7 +5,7 @@ function login() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  fetch("https://your-backend-url.onrender.com/login", {
+  fetch("https://subhub-api.onrender.com/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -28,7 +28,7 @@ function placeOrder() {
   const link = document.getElementById("link").value;
   const quantity = document.getElementById("quantity").value;
 
-  fetch("https://your-backend-url.onrender.com/order", {
+  fetch("https://subhub-api.onrender.com/order", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token, service, link, quantity }),
@@ -38,7 +38,7 @@ function placeOrder() {
 }
 
 function fetchOrders() {
-  fetch("https://your-backend-url.onrender.com/order-history", {
+  fetch("https://subhub-api.onrender.com/order-history", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token }),
