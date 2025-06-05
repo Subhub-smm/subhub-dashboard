@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SubHub SMM Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📈 SubHub Dashboard</h1>
+
+    <div class="auth">
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+
+      <div class="panel">
+        <h3>Place Order</h3>
+        <input type="text" id="service" placeholder="Service (e.g. YouTube Subs)" />
+        <input type="text" id="link" placeholder="Link" />
+        <input type="number" id="quantity" placeholder="Quantity" />
+        <button onclick="placeOrder()">Submit Order</button>
+      </div>
+
+      <div class="panel">
+        <h3>Order History</h3>
+        <button onclick="fetchOrders()">View Orders</button>
+        <ul id="orders-list"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
